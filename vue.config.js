@@ -1,3 +1,5 @@
 module.exports = {
-    baseUrl: '/light-blue-vue-admin/'
+    baseUrl: '',
+    outputDir: "wwwroot/",
+    filenameHashing: false
 }

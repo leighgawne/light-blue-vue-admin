@@ -277,8 +277,8 @@ import 'imports-loader?jQuery=jquery,this=>window!flot/jquery.flot.time';
 import Widget from '@/components/Widget/Widget';
 import d3 from 'd3';
 import nv from 'nvd3';
-import FlotBars from './Flot/BarsChart';
-import AreaChart from '../Dashboard/components/AreaChart/AreaChart';
+import FlotBars from './Flot/charts/BarsChart';
+import AreaChart from '../Visits/components/AreaChart/AreaChart';
 
 const FlotChartData = [
   {

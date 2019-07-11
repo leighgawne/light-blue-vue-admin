@@ -13,40 +13,157 @@
               link="/app/dashboard"
               iconName="flaticon-home"
               index="dashboard"
-              isHeader
-      />
-      <h5 class="navTitle">TEMPLATE</h5>
-      <NavLink
-              header="Typography"
-              link="/app/typography"
-              iconName="flaticon-list"
-              index="typography"
-              isHeader
+              :childrenLinks="[
+          { header: 'Visits', link: '/app/dashboard/visits' },
+          { header: 'Analytics', link: '/app/dashboard/analytics' },
+          { header: 'Widgets', link: '/app/dashboard/widgets' },
+        ]"
       />
       <NavLink
-              header="Tables Basic"
-              link="/app/tables"
-              iconName="flaticon-equal-1"
-              index="tables"
-              isHeader
-      />
-      <NavLink
-              header="Notifications"
-              link="/app/notifications"
-              iconName="flaticon-star"
-              index="notifications"
+              :activeItem="activeItem"
+              header="The Package"
+              link="/app/package"
+              iconName="flaticon-database-1"
+              index="package"
+              label="new"
               isHeader
       />
       <NavLink
               :activeItem="activeItem"
-              header="Components"
-              link="/app/components"
-              iconName="flaticon-network"
-              index="components"
+              header="Profile"
+              link="/app/profile"
+              iconName="flaticon-user"
+              index="profile"
+              isHeader
+      />
+      <NavLink
+              :activeItem="activeItem"
+              header="Email"
+              link="/app/email"
+              iconName="flaticon-paper-plane"
+              index="email"
+              badge="9"
+              isHeader
+      />
+      <NavLink
+              :activeItem="activeItem"
+              header="E-commerce"
+              link="/app/ecommerce"
+              iconName="flaticon-diamond"
+              index="ecommerce"
               :childrenLinks="[
-          { header: 'Charts', link: '/app/components/charts' },
-          { header: 'Icons', link: '/app/components/icons' },
-          { header: 'Maps', link: '/app/components/maps' },
+          { header: 'Products Grid', link: '/app/ecommerce/products' },
+          { header: 'Product Page', link: '/app/ecommerce/product' },
+        ]"
+      />
+      <h5 class="navTitle">TEMPLATE</h5>
+      <NavLink
+              :activeItem="activeItem"
+              header="Core"
+              link="/app/core"
+              iconName="flaticon-network"
+              index="core"
+              :childrenLinks="[
+          { header: 'Typography', link: '/app/core/typography' },
+          { header: 'Colors', link: '/app/core/colors' },
+          { header: 'Grid', link: '/app/core/grid' },
+        ]"
+      />
+      <NavLink
+              :activeItem="activeItem"
+              header="UI Elements"
+              link="/app/ui"
+              iconName="flaticon-layers"
+              index="ui"
+              :childrenLinks="[
+          { header: 'Alerts', link: '/app/ui/alerts' },
+          { header: 'Badge', link: '/app/ui/badge' },
+          { header: 'Buttons', link: '/app/ui/buttons' },
+          { header: 'Card', link: '/app/ui/card' },
+          { header: 'Carousel', link: '/app/ui/carousel' },
+          { header: 'Jumbotron', link: '/app/ui/jumbotron' },
+          { header: 'Icons', link: '/app/ui/icons' },
+          { header: 'List Groups', link: '/app/ui/list-groups' },
+          { header: 'Modal', link: '/app/ui/modal' },
+          { header: 'Nav', link: '/app/ui/nav' },
+          { header: 'Navbar', link: '/app/ui/navbar' },
+          { header: 'Notifications', link: '/app/ui/notifications' },
+          { header: 'Pagination', link: '/app/tables/dynamic' },
+          { header: 'Popovers & Tooltips', link: '/app/ui/popovers' },
+          { header: 'Progress', link: '/app/ui/progress' },
+          { header: 'Tabs & Accordion', link: '/app/ui/tabs' },
+        ]"
+      />
+      <NavLink
+              :activeItem="activeItem"
+              header="Forms"
+              link="/app/forms"
+              iconName="flaticon-list"
+              index="forms"
+              :childrenLinks="[
+          { header: 'Form Elements', link: '/app/forms/elements' },
+          { header: 'Form Validation', link: '/app/forms/validation' },
+          { header: 'Forms Wizard', link: '/app/forms/wizard' },
+        ]"
+      />
+      <NavLink
+              :activeItem="activeItem"
+              header="Charts"
+              link="/app/charts"
+              iconName="flaticon-controls"
+              index="charts"
+              :childrenLinks="[
+          { header: 'Charts Overview', link: '/app/charts/overview' },
+          { header: 'Flot Charts', link: '/app/charts/flot' },
+          { header: 'Morris Charts', link: '/app/charts/morris' },
+          { header: 'Sparkline Charts', link: '/app/charts/sparkline' },
+          { header: 'Easy Pie Charts', link: '/app/charts/easy-pie' },
+        ]"
+      />
+      <NavLink
+              :activeItem="activeItem"
+              header="Grid"
+              link="/app/grid"
+              iconName="flaticon-menu-4"
+              index="grid"
+              isHeader
+      />
+      <NavLink
+              :activeItem="activeItem"
+              header="Tables"
+              link="/app/tables"
+              iconName="flaticon-equal-1"
+              index="tables"
+              :childrenLinks="[
+          { header: 'Tables Basic', link: '/app/tables/basic' },
+          { header: 'Tables Dynamic', link: '/app/tables/dynamic' },
+        ]"
+      />
+      <NavLink
+              :activeItem="activeItem"
+              header="Maps"
+              link="/app/maps"
+              iconName="flaticon-map-location"
+              index="maps"
+              :childrenLinks="[
+          { header: 'Google Maps', link: '/app/maps/google' },
+          { header: 'Vector Maps', link: '/app/maps/vector' },
+        ]"
+      />
+      <NavLink
+              :activeItem="activeItem"
+              header="Extra"
+              link="/app/extra"
+              iconName="flaticon-star"
+              index="extra"
+              :childrenLinks="[
+          { header: 'Calendar', link: '/app/extra/calendar' },
+          { header: 'Invoice', link: '/app/extra/invoice' },
+          { header: 'Login Page', link: '/login' },
+          { header: 'Error Page', link: '/error' },
+          { header: 'Gallery', link: '/app/extra/gallery' },
+          { header: 'Search Result', link: '/app/extra/search' },
+          { header: 'Time Line', link: '/app/extra/time-line' },
         ]"
       />
     </ul>

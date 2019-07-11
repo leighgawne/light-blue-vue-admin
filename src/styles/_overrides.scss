@@ -176,15 +176,14 @@ small {
   background-image: linear-gradient(to right, #ffffff26, #fff0);
 }
 
+[class*="btn-outline"] {
+  background-image: none;
+}
+
 .btn-link {
   &:focus {
     box-shadow: none;
   }
-}
-
-.btn-secondary {
-  border-color: $gray-400;
-  color: $gray-800;
 }
 
 .btn-success,
@@ -216,6 +215,10 @@ small {
 
 .btn-secondary.active {
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn-transparent {
+  background-image: none;
 }
 
 .btn {
@@ -514,12 +517,6 @@ h6,
   padding: 20px;
 }
 
-// Modal
-
-.modal-body {
-  background: $gray-200;
-}
-
 // Navs
 // --------------------------------------------------
 
@@ -574,6 +571,24 @@ h6,
   }
 }
 
+.nav-pills {
+  padding: 0;
+
+  .nav-link {
+    color: transparentize($text-color, .3);
+
+    &:hover {
+      color: $nav-pills-link-active-color;
+    }
+
+    &.active {
+      font-weight: $font-weight-semi-bold;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}
+
 .tab-content {
   position: relative;
   z-index: 1;
@@ -582,23 +597,6 @@ h6,
   > .tab-pane {
     padding: $spacer*2;
   }
-}
-
-//
-// Panels
-// --------------------------------------------------
-
-.panel {
-  background-color: transparent;
-  border: none;
-}
-
-.panel-header {
-  background-color: $gray-400;
-  color: $gray-800;
-  border-bottom: 1px solid transparent;
-
-  @include border-top-radius(($border-radius));
 }
 
 // Code
@@ -967,7 +965,7 @@ ul.messenger.messenger-spinner-active .messenger-spinner .messenger-spinner {
   position: relative;
   display: inline-block;
   text-align: center;
-  color: #798892;
+  color: $text-color;
 }
 
 .easy-pie-chart-md canvas,
@@ -1017,4 +1015,83 @@ ul.messenger-theme-air {
 
 .nvd3 .nv-axis line {
   display: none;
+}
+
+
+// wysiwyg editor
+
+.trumbowyg-body-fullscreen {
+  color: $input-color;
+
+  .header {
+    z-index: -1;
+  }
+
+  .content {
+    animation: none;
+  }
+}
+
+.v-select {
+  .open-indicator:before {
+    border-width: 1px 1px 0 0;
+    width: 5px;
+    height: 5px;
+  }
+
+  .dropdown-toggle .clear {
+    font-weight: $font-weight-thin;
+    font-size: 18px;
+  }
+
+  li > a {
+    color: $input-color !important;
+  }
+
+  .selected-tag {
+    color: $input-color;
+  }
+
+  .dropdown-toggle {
+    border-color: $input-border-color;
+    background-color: $input-bg;
+  }
+}
+
+.vue-slider {
+  .vue-slider-process {
+    background-color: theme-color("primary");
+  }
+
+  &.slider-danger .vue-slider-process {
+    background-color: theme-color("danger");
+  }
+
+  &.slider-warning .vue-slider-process {
+    background-color: theme-color("warning");
+  }
+
+  &.slider-success .vue-slider-process {
+    background-color: theme-color("success");
+  }
+
+  &.slider-info .vue-slider-process {
+    background-color: theme-color("info");
+  }
+}
+
+.dropzone.vue-dropzone {
+  border: 2px dashed $widget-bg;
+  font-family: $font-family-base;
+  background-color: $addition-bg;
+  border-radius: $widget-border-radius;
+  color: $text-color;
+
+  &:hover {
+    background-color: transparentize($addition-bg, .1);
+  }
+}
+
+.vue-form-wizard .wizard-nav-pills > li > a {
+  position: static !important;
 }

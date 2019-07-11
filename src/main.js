@@ -6,6 +6,15 @@ import Vue from 'vue';
 import BootstrapVue from 'bootstrap-vue';
 import VCalendar from 'v-calendar';
 import * as VueGoogleMaps from 'vue2-google-maps';
+import VueTextareaAutosize from 'vue-textarea-autosize';
+import trumbowyg from 'vue-trumbowyg';
+import mavonEditor from 'mavon-editor';
+import { VueMaskDirective } from 'v-mask';
+import VueSlider from 'vue-slider-component';
+import VeeValidate from 'vee-validate';
+import VueFormWizard from 'vue-form-wizard';
+import { ClientTable } from 'vue-tables-2';
+import Trend from 'vuetrend';
 
 import store from './store';
 import router from './Routes';
@@ -22,6 +31,17 @@ Vue.use(VueGoogleMaps, {
 Vue.use(VCalendar, {
   firstDayOfWeek: 2,  // Monday
 });
+
+Vue.use(VueTextareaAutosize);
+Vue.use(trumbowyg);
+Vue.use(mavonEditor);
+Vue.directive('mask', VueMaskDirective);
+Vue.component('VueSlider', VueSlider);
+Vue.use(VeeValidate, { fieldsBagName: 'fieldsbag' });
+Vue.use(VueFormWizard);
+
+Vue.use(ClientTable, { theme: 'bootstrap4' });
+Vue.use(Trend);
 
 Vue.config.productionTip = false;
 
